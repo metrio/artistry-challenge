@@ -1,0 +1,10 @@
+<h1>Check out the Artists in the Studio</h1>
+<br>
+
+<ul>
+    <% @artists.each do |artist|  %>
+    <li> <%= link_to artist.name, artist_path(artist.id) %> </li>
+    <% end%>
+</ul>
+
+   

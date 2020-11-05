@@ -1,0 +1,7 @@
+<h1>Artist and Instrument selection</h1>
+<%= form_for  @artist_instrument do |f|%>
+<h3>Select the artist:<%= f.collection_select(:artist_id, Artist.all, :id, :name) %></h3>
+<h3>Select an instrument for them:<%= f.collection_select(:instrument_id, Instrument.all, :id, :name) %></h3>
+<%= f.submit %>
+
+<% end%>

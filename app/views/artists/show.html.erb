@@ -1,0 +1,9 @@
+<h1><%= @artist.name %></h1>
+<h3>Age:<%= @artist.age %></h3>
+<h3>Title:<%= @artist.title %></h3>
+
+
+Instruments
+    <% @artist.instrument.each do |instrument|  %>
+    <li> <%= link_to instrument.name, instrument_path(instrument.id) %> </li>
+    <% end%>
